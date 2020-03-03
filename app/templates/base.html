@@ -5,8 +5,20 @@
   <body>
     <header>
       <nav>
-        <a href="/">home</a>
+        <a href="{{ url_for('index') }}">Home<a>
+        <a href="{{ url_for('login') }}">Login</a>
       </nav>
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          <ul>
+            {% for message in messages %}
+              <li>
+                {{ message }}
+              </li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
     </header>
     {% block content %}{% endblock %}
   </body>
