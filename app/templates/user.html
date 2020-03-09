@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <ul>
+      <li>
+       <img src="{{ user.gravatar(128) }}" > 
+      </li>
+      <li>
+        <h1>{{ user.username }}</h1>
+        {% if user == current_user %}
+          <a href="{{ url_for('edit_profile') }}">Edit Profile</a>
+        {% endif %}
+        {% if user.bio %}
+          <p>{{ user.about_me }}</p>
+        {% endif %}
+        {% if user.last_seen %}
+          <p>{{ user.last_seen }}</p>
+        {% endif %}
+      </li>
+    </ul>
+    {% for post in posts %}
+      {% include "_post.html" %}
+    {% endfor %}
+{% endblock %}
