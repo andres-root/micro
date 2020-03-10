@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import os
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
@@ -27,6 +28,9 @@ app.config['MAIL_USE_TLS'] = os.environ.get('MAIL_USER_TLSs')
 app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 app.config['ADMINS'] = ['andreslujandev@gmail.com']
+
+app.config['POSTS_PER_PAGE'] = 3
+
 
 if not app.debug:
     if app.config['MAIL_SERVER']:

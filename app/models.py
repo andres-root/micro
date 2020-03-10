@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from datetime import datetime
 from hashlib import md5
 from werkzeug.security import generate_password_hash, check_password_hash
@@ -24,7 +25,7 @@ class User(UserMixin, db.Model):
         primaryjoin=(followers.c.follower_id == uid),
         secondaryjoin=(followers.c.followed_id == uid),
         backref=db.backref('followers', lazy='dynamic')
-    )
+    , lazy='dynamic')
 
     def __repr__(self):
         return 'User {}'.format(self.username)
@@ -41,6 +42,25 @@ class User(UserMixin, db.Model):
     def gravatar(self, size):
         digest = md5(self.email.lower().encode('utf-8')).hexdigest()
         return 'http://gravatar.com/avatar/{0}?d=identicon&s={1}'.format(digest, size)
+    
+    def follow(self, user):
+        if not self.is_following(user):
+            self.followed.append(user)
+    
+    def unfollow(self, user):
+        if self.is_following(user):
+            self.followed.remove(user)
+    
+    def is_following(self, user):
+        return self.followed.filter(followers.c.followed_id == user.uid).count() > 0
+
+    def followed_posts(self):
+        followed = Post.query.join(
+            followers,
+            (followers.c.followed_id == Post.user_id)
+        ).filter(followers.c.follower_id == self.uid)
+        
+        return followed.union(self.posts).order_by(Post.timestamp.desc())
 
 
 @login.user_loader

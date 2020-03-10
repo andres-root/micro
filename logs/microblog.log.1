@@ -1,0 +1,122 @@
+2020-03-08 23:24:03,320 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-08 23:33:02,842 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-08 23:53:57,800 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-08 23:54:15,457 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-08 23:56:20,893 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-08 23:57:01,117 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-08 23:57:21,903 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-08 23:57:29,376 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-09 20:43:27,929 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-09 20:49:23,182 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-09 20:54:55,423 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-09 20:57:36,578 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-09 20:59:08,828 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-09 21:01:16,197 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-09 21:05:20,395 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:57]
+2020-03-09 21:26:35,132 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:26:52,877 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:27:02,039 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:27:29,862 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:28:42,007 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:29:32,983 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:32:16,922 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:32:29,425 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:42:14,473 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:42:26,567 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:43:09,323 ERROR: Exception on /follow/pepita [GET] [in /Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py:1890]
+Traceback (most recent call last):
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/alujan/sites/micro/app/routes.py", line 138, in follow
+    return redirect('user', username=username)
+TypeError: redirect() got an unexpected keyword argument 'username'
+2020-03-09 21:44:12,711 ERROR: Exception on /unfollow/pepita [GET] [in /Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py:1890]
+Traceback (most recent call last):
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/alujan/sites/micro/app/routes.py", line 158, in unfollow
+    return redirect('user', username=username)
+TypeError: redirect() got an unexpected keyword argument 'username'
+2020-03-09 21:44:23,523 ERROR: Exception on /follow/pepita [GET] [in /Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py:1890]
+Traceback (most recent call last):
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/alujan/sites/micro/app/routes.py", line 138, in follow
+    return redirect('user', username=username)
+TypeError: redirect() got an unexpected keyword argument 'username'
+2020-03-09 21:44:38,637 ERROR: Exception on /follow/pepita [GET] [in /Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py:1890]
+Traceback (most recent call last):
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/alujan/sites/micro/app/routes.py", line 138, in follow
+    return redirect('user', username=username)
+TypeError: redirect() got an unexpected keyword argument 'username'
+2020-03-09 21:44:57,436 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:45:25,128 INFO: Microblog startup [in /Users/alujan/sites/micro/app/__init__.py:58]
+2020-03-09 21:45:30,812 ERROR: Exception on /follow/pepita [GET] [in /Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py:1890]
+Traceback (most recent call last):
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 2446, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1951, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1820, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1949, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask/app.py", line 1935, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/alujan/anaconda3/envs/micro/lib/python3.8/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/alujan/sites/micro/app/routes.py", line 138, in follow
+    return redirect('user', username=username)
+TypeError: redirect() got an unexpected keyword argument 'username'

@@ -1,4 +1,5 @@
 from app import app, db
+#!/usr/bin/env python
 from app.models import User, Post
 
 

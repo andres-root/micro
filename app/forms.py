@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 from flask_wtf import FlaskForm
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
 from wtforms.validators import DataRequired, Email, EqualTo, ValidationError, Length
@@ -48,3 +49,8 @@ class EditProfileForm(FlaskForm):
 
             if user is not None:
                 raise ValidationError('Username is already taken.')
+
+
+class PostForm(FlaskForm):
+    post = TextAreaField('Say something', validators=[DataRequired(), Length(min=0, max=140)])
+    submit = SubmitField('Post')
