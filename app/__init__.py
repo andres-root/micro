@@ -29,7 +29,7 @@ app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
 app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 app.config['ADMINS'] = ['andreslujandev@gmail.com']
 
-app.config['POSTS_PER_PAGE'] = 3
+app.config['POSTS_PER_PAGE'] = 25
 
 
 if not app.debug:
